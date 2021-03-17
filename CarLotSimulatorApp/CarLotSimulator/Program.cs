@@ -6,28 +6,39 @@ namespace CarLotSimulator
     {
         static void Main(string[] args)
         {
-            //TODO
+            var cars = new CarLot();
+            var c1 = new Car();
+            c1.Year = 2020;
+            c1.Make = "Ford";
+            c1.Model = "Focus";
+            c1.HonkNoise = "Beep";
+            c1.EngineNoise = "Vroom";
+            cars.AddCar(c1);
 
-            //Create a seperate class file called Car
-            //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable
-            //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()
-            //The methods should take one string parameter: the respective noise property
+            var c2 = new Car(2019,"Dodge", "Colt", "epp", "BrrBrr");
+            cars.AddCar(c2);
 
+            var c3 = new Car()
+            {
+            Year = 2018,
+            Make = "Toyota",
+            Model = "Camery",
+            HonkNoise = "meep",
+            EngineNoise = "chukachuka"
+            };
+            cars.AddCar(c3);
 
-            //Now that the Car class is created we can instanciate 3 new cars
-            //Set the properties for each of the cars
-            //Call each of the methods for each car
+            c1.MakeEngineNoise();
+            c1.MakeHonkNoise();
 
-            //*************BONUS*************//
+            c2.MakeEngineNoise();
+            c2.MakeHonkNoise();
 
-            // Set the properties utilizing the 3 different ways we learned about, one way for each car
+            c3.MakeEngineNoise();
+            c3.MakeHonkNoise();
 
-            //*************BONUS X 2*************//
-
-            //Create a CarLot class
-            //It should have at least one property: a List of cars
-            //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
-            //At the end iterate through the list printing each of car's Year, Make, and Model to the console
+            Console.WriteLine(cars);
+            
         }
     }
 }
