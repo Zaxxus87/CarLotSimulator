@@ -38,6 +38,7 @@ namespace CarLotSimulator
             c3.MakeHonkNoise();
 
             Console.WriteLine(cars);
+            Console.WriteLine($"Number of Cars in Lot: {CarLot.numberOfCars}");
             
         }
     }
